@@ -28,5 +28,4 @@ public class ProgramTest { // something new to write tests towards
     public String secondWord(String words) {
         return words.substring( words.indexOf( " " ) + 2 ); // wrongly written again, should be +1 instead
     }
-
 }
