@@ -1,4 +1,4 @@
 # junit5testing
-just contains a Class with some code and a class with tests
+Code has been replaced and new tests added
 
-Regardning the tests, the first one should fail as of the intentional fault in firstLetter() where index 1 is used instead of 0.
+When it comes to the new tests one should fail again as of the intentional fault in lastWord() as +1 should be used instead of +2. Though there is also a test for the method that still will pass because of a typo.
