@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class ProgramTest { // something thrown together to write tests towards
+public class ProgramTest { // something new to write tests towards
 
     public static void main(String[] args) {
 
@@ -12,38 +12,21 @@ public class ProgramTest { // something thrown together to write tests towards
 
         Scanner input = new Scanner(System.in);
 
-        int nr1;
-        int nr2;
-        String word;
+        String words;
 
-        System.out.println("Enter a word.");
-        word = input.nextLine();
+        System.out.println("Enter a two words in the following format: 'Word1 Word2'.");
+        words = input.nextLine();
 
-        System.out.println("Enter a number");
-        nr1 = input.nextInt();
-
-        System.out.println("Enter another number");
-        nr2 = input.nextInt();
-
-        System.out.println("The first letter in: " + word + " is " + firstLetter(word));
-        System.out.println("The last letter in: " + word + " is " + lastLetter(word));
-        System.out.println(nr1 + " + " + nr2 + " is: " + addingNumbers(nr1, nr2));
-        System.out.println(nr1 + " - " + nr2 + " is: " + subtractingNumbers(nr1, nr2));
+        System.out.println("The first word is: " + firstWord(words));
+        System.out.println("The second word is: " + secondWord(words));
     }
 
-    public char firstLetter(String word) {
-        return word.charAt(1); // intentional mistake, should be index 0 for first the first letter
+    public String firstWord(String words) {
+        return words.substring( 0, words.indexOf( " " ));
     }
 
-    public char lastLetter(String word) {
-        return word.charAt((word.length() - 1));
+    public String secondWord(String words) {
+        return words.substring( words.indexOf( " " ) + 2 ); // wrongly written again, should be +1 instead
     }
 
-    public static int addingNumbers(int nr1, int nr2) {
-        return (nr1 + nr2);
-    }
-
-    public int subtractingNumbers(int nr1, int nr2) {
-        return (nr1 - nr2);
-    }
 }
